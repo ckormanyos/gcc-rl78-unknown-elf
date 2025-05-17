@@ -68,7 +68,7 @@ wget --no-check-certificate https://gcc.gnu.org/pub/gcc/infrastructure/isl-0.24.
 wget --no-check-certificate https://gcc.gnu.org/pub/gcc/infrastructure/cloog-0.18.1.tar.gz
 wget --no-check-certificate https://ftp.gnu.org/gnu/binutils/binutils-2.44.tar.xz
 wget --no-check-certificate https://ftp.gnu.org/gnu/gcc/gcc-"$MY_VERSION"/gcc-"$MY_VERSION".tar.xz
-wget --no-check-certificate ftp://sourceware.org/pub/newlib/newlib-4.4.0.20231231.tar.gz
+wget --no-check-certificate ftp://sourceware.org/pub/newlib/newlib-4.5.0.20241231.tar.gz
 echo
 
 
@@ -172,8 +172,8 @@ echo
 cd $SCRIPT_DIR/gcc_build
 echo 'build gcc'
 tar -xf gcc-"$MY_VERSION".tar.xz
-tar -xf newlib-4.4.0.20231231.tar.gz
-cd newlib-4.4.0.20231231
+tar -xf newlib-4.5.0.20241231.tar.gz
+cd newlib-4.5.0.20241231
 cp -r newlib libgloss ../gcc-"$MY_VERSION"
 cd ..
 mkdir objdir-gcc-"$MY_VERSION"-rl78-unknown-elf
